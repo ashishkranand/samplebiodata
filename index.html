@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biodata: Ashish Kumar Anand</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Visualization & Content Choices:
+        - Header: Report Info (Invocation, Name) -> Goal (Set Tone, Identify Subject) -> Viz/Presentation (Styled HTML text) -> Interaction (None) -> Justification (Cultural relevance and clear identification) -> Library/Method (HTML/Tailwind).
+        - Personal Profile: Report Info (Name, DOB, Caste, Height, Complexion) -> Goal (Inform) -> Viz/Presentation (Styled HTML list/key-value pairs with Unicode icons: 👤, 🎂, 📜, 📏, 🎨) -> Interaction (None) -> Justification (Clear, concise presentation of core identity details) -> Library/Method (HTML/Tailwind).
+        - Educational Journey: Report Info (Degrees, Institutions, Years, STET) -> Goal (Inform, Show Progression) -> Viz/Presentation (Chronological list/cards using HTML/Tailwind, highlighting degree levels and STET qualification 🎓, 🏫) -> Interaction (None) -> Justification (Easy to follow academic timeline) -> Library/Method (HTML/Tailwind).
+        - Professional Experience: Report Info (Occupation, Department, University) -> Goal (Inform) -> Viz/Presentation (Styled HTML block with professional icon 💼) -> Interaction (None) -> Justification (Clear presentation of current role) -> Library/Method (HTML/Tailwind).
+        - Family Background: Report Info (Grandfather, Father, Mother, Siblings) -> Goal (Inform) -> Viz/Presentation (Styled HTML list 👨‍👩‍👧‍👦) -> Interaction (None) -> Justification (Presents family structure as per biodata) -> Library/Method (HTML/Tailwind).
+        - Contact Information: Report Info (Address, Contact Nos.) -> Goal (Provide Means to Connect) -> Viz/Presentation (Styled HTML block with location and phone icons 📍, 📞) -> Interaction (None) -> Justification (Easy access to contact details) -> Library/Method (HTML/Tailwind).
+        No charts are needed as the data is primarily textual and descriptive. The focus is on clear, structured presentation of information.
+    -->
+    <style>
+      body {
+        font-family: "Inter", sans-serif; /* Using a common sans-serif font */
+        background-color: #f8f7f4; /* Alabaster/Light Beige */
+        color: #3a3a3a; /* Dark Charcoal */
+      }
+      .nav-link {
+        transition: all 0.3s ease;
+        color: #3a3a3a; /* Dark Charcoal */
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        background-color: #ec3841; /* Subtle Green/Teal */
+        color: #ffffff; /* White text on hover/active */
+        transform: translateX(5px);
+      }
+      .content-section {
+        display: none; /* Hidden by default */
+        padding-top: 1.5rem; /* 24px */
+        padding-bottom: 1.5rem; /* 24px */
+      }
+      .content-section.active {
+        display: block; /* Shown when active */
+      }
+      .card {
+        background-color: #ffffff; /* White card background */
+        border: 1px solid #d1d5db; /* Light Gray border */
+        border-radius: 0.5rem; /* 8px */
+        padding: 1.5rem; /* 24px */
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07),
+          0 2px 4px -1px rgba(0, 0, 0, 0.04);
+      }
+      .icon-style {
+        margin-right: 0.75rem; /* 12px */
+        font-size: 1.25rem; /* 20px */
+        color: #ec3841; /* Accent color for icons */
+      }
+      /* Custom scrollbar for a cleaner look - WebKit browsers */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f8f7f4;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #ec3841;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ec3841;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="min-h-screen flex flex-col md:flex-row">
+    <nav
+      class="w-full md:w-64 bg-white md:bg-[#F0EFEB] p-4 md:p-6 shadow-lg md:shadow-none md:border-r border-gray-200 sticky top-0 h-auto md:h-screen"
+    >
+      <div class="text-center mb-8">
+        <h2 class="text-xl font-bold text-[#ec3841]">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkxUBWkiPfOceAkUTc5cAngdBgxuWjGbr_0w&s"
+            class="w-16 h-16 rounded-full mx-auto"
+            alt=""
+          />
+        </h2>
+        <h1 class="text-2xl font-semibold mt-2 text-[#3A3A3A]">
+          Ashish Kumar Anand
+        </h1>
+        <p class="text-sm text-gray-600">Interactive Biodata</p>
+      </div>
+      <ul class="space-y-3">
+        <li>
+          <a
+            href="#personal"
+            class="nav-link block py-2.5 px-4 rounded-lg font-medium"
+            >👤 Personal Profile</a
+          >
+        </li>
+        <li>
+          <a
+            href="#education"
+            class="nav-link block py-2.5 px-4 rounded-lg font-medium"
+            >🎓 Educational Journey</a
+          >
+        </li>
+        <li>
+          <a
+            href="#experience"
+            class="nav-link block py-2.5 px-4 rounded-lg font-medium"
+            >💼 Professional Experience</a
+          >
+        </li>
+        <li>
+          <a
+            href="#family"
+            class="nav-link block py-2.5 px-4 rounded-lg font-medium"
+            >👨‍👩‍👧‍👦 Family Background</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="nav-link block py-2.5 px-4 rounded-lg font-medium"
+            >📞 Contact Information</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <main class="flex-1 p-6 md:p-10 overflow-y-auto">
+      <div class="max-w-4xl mx-auto">
+        <div
+          class="mb-10 p-6 bg-white rounded-lg shadow-md border border-gray-200"
+        >
+          <h2 class="text-xl font-bold text-[#ec3841] text-center">
+            || श्री गणेशाय नमः ||
+          </h2>
+
+          <!-- <p class="text-gray-700 leading-relaxed">
+            Explore the comprehensive profile of Ashish Kumar Anand, an
+            accomplished Assistant Professor in Computer Science. This
+            interactive biodata highlights his educational journey, including a
+            Master of Computer Application (MCA) from Lovely Professional
+            University and a Bachelor of Computer Application (BCA) from
+            B.N.M.U, Madhepura, alongside his qualification in the STET. Delve
+            into his professional experience at Mandsaur University, personal
+            background, and contact details, all presented in an
+            easy-to-navigate format.
+          </p> -->
+        </div>
+
+        <section id="personal" class="content-section card mb-8">
+          <h3 class="text-2xl font-semibold mb-6 text-[#ec3841] border-b pb-2">
+            👤 Personal Profile
+          </h3>
+          <!-- <p class="text-gray-700 mb-6">
+            This section outlines the fundamental personal details of Ashish
+            Kumar Anand, providing core identification information as presented
+            in his biodata.
+          </p> -->
+          <ul class="space-y-3 text-lg">
+            <li class="flex items-center">
+              <span class="icon-style">👤</span
+              ><strong>Name:</strong>&nbsp;Ashish Kumar Anand
+            </li>
+            <li class="flex items-center">
+              <span class="icon-style">🎂</span
+              ><strong>Date of Birth:</strong>&nbsp;14/09/2000
+            </li>
+            <li class="flex items-center">
+              <span class="icon-style">📜</span
+              ><strong>Caste:</strong>&nbsp;Teli (Hindu)
+            </li>
+            <li class="flex items-center">
+              <span class="icon-style">📏</span
+              ><strong>Height:</strong>&nbsp;5ft 9in.
+            </li>
+            <li class="flex items-center">
+              <span class="icon-style">🎨</span
+              ><strong>Complexion:</strong>&nbsp;Light Brown
+            </li>
+          </ul>
+        </section>
+
+        <section id="education" class="content-section card mb-8">
+          <h3 class="text-2xl font-semibold mb-6 text-[#ec3841] border-b pb-2">
+            🎓 Educational Journey
+          </h3>
+          <!-- <p class="text-gray-700 mb-6">
+            Discover Ashish Kumar Anand's academic qualifications and
+            progression. This section details his degrees, the institutions he
+            attended, and relevant certifications, showcasing his educational
+            foundation.
+          </p> -->
+          <div class="space-y-6">
+            <div>
+              <h4 class="text-xl font-medium text-gray-800">
+                Master of Computer Application (MCA)
+              </h4>
+              <p class="text-gray-600">
+                <span class="icon-style" style="font-size: 1rem">🏫</span>Lovely
+                Professional University, Phagwara (Punjab)
+              </p>
+              <p class="text-gray-500 text-sm">🗓️ 2021 - 2023</p>
+            </div>
+            <div>
+              <h4 class="text-xl font-medium text-gray-800">
+                Bachelor of Computer Application (BCA)
+              </h4>
+              <p class="text-gray-600">
+                <span class="icon-style" style="font-size: 1rem">🏫</span
+                >B.N.M.U, Madhepura (Bihar)
+              </p>
+              <p class="text-gray-500 text-sm">🗓️ 2017 - 2020</p>
+            </div>
+            <div>
+              <h4 class="text-xl font-medium text-gray-800">
+                XIIth (Intermediate)
+              </h4>
+              <p class="text-gray-600">
+                <span class="icon-style" style="font-size: 1rem">🏫</span
+                >B.S.E.B Patna
+              </p>
+              <p class="text-gray-500 text-sm">🗓️ 2017</p>
+            </div>
+            <div>
+              <h4 class="text-xl font-medium text-gray-800">
+                Xth (Matriculation)
+              </h4>
+              <p class="text-gray-600">
+                <span class="icon-style" style="font-size: 1rem">🏫</span
+                >B.S.E.B Patna
+              </p>
+              <p class="text-gray-500 text-sm">🗓️ 2015</p>
+            </div>
+            <div>
+              <h4 class="text-xl font-medium text-gray-800">
+                STET (State Teacher Eligibility Test)
+              </h4>
+              <p class="text-green-600 font-semibold">
+                <span class="icon-style" style="font-size: 1rem">✔️</span
+                >Qualified
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="experience" class="content-section card mb-8">
+          <h3 class="text-2xl font-semibold mb-6 text-[#ec3841] border-b pb-2">
+            💼 Professional Experience
+          </h3>
+          <!-- <p class="text-gray-700 mb-6">
+            This section highlights Ashish Kumar Anand's current professional
+            role and affiliation, reflecting his career in the field of computer
+            science and academia.
+          </p> -->
+          <div>
+            <h4 class="text-xl font-medium text-gray-800">Asst. Professor</h4>
+            <p class="text-gray-600">
+              Computer Science and Application Department
+            </p>
+            <p class="text-gray-600">Mandsaur University, MP</p>
+          </div>
+        </section>
+
+        <section id="family" class="content-section card mb-8">
+          <h3 class="text-2xl font-semibold mb-6 text-[#ec3841] border-b pb-2">
+            👨‍👩‍👧‍👦 Family Background
+          </h3>
+          <!-- <p class="text-gray-700 mb-6">
+            Learn about Ashish Kumar Anand's family structure. This section
+            provides details about his immediate family members as listed in the
+            biodata.
+          </p> -->
+          <ul class="space-y-3 text-lg">
+            <li class="flex items-center">
+              <strong>Grandfather's Name:</strong>&nbsp;Shree Surat Lal Sah
+            </li>
+            <li class="flex items-center">
+              <strong>Father's Name:</strong>&nbsp;Shree Chandan Kumar
+            </li>
+            <li class="flex items-center">
+              <strong>Mother's Name:</strong>&nbsp;Meera Devi
+            </li>
+            <li class="flex items-center">
+              <strong>Siblings:</strong>&nbsp;3 Brothers and 1 Sister (All
+              Unmarried)
+            </li>
+          </ul>
+        </section>
+
+        <section id="contact" class="content-section card mb-8">
+          <h3 class="text-2xl font-semibold mb-6 text-[#ec3841] border-b pb-2">
+            📞 Contact Information
+          </h3>
+          <!-- <p class="text-gray-700 mb-6">
+            Find out how to get in touch with Ashish Kumar Anand. This section
+            includes his residential address and contact numbers.
+          </p> -->
+          <ul class="space-y-3 text-lg">
+            <li class="flex items-start">
+              <span class="icon-style mt-1">📍</span>
+              <div>
+                <strong>Address:</strong><br />
+                At-Itahara, Post - Rampur, Ps - Saurbazar, <br />
+                Dist - Saharsa, Pincode - 852221 (Bihar)
+              </div>
+            </li>
+            <li class="flex items-center">
+              <span class="icon-style">📞</span
+              ><strong>Contact No:</strong>&nbsp;8434463000 / 9234816909
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".nav-link");
+        const contentSections = document.querySelectorAll(".content-section");
+
+        function setActiveSection(hash) {
+          navLinks.forEach((link) => {
+            if (link.getAttribute("href") === hash) {
+              link.classList.add("active");
+            } else {
+              link.classList.remove("active");
+            }
+          });
+
+          contentSections.forEach((section) => {
+            if ("#" + section.id === hash) {
+              section.classList.add("active");
+            } else {
+              section.classList.remove("active");
+            }
+          });
+        }
+
+        // Show the first section by default or based on URL hash
+        let initialHash = window.location.hash;
+        if (!initialHash || !document.querySelector(initialHash)) {
+          initialHash = "#personal"; // Default to personal section
+        }
+        setActiveSection(initialHash);
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function (event) {
+            // For single page app behavior, prevent default scroll for a moment
+            // event.preventDefault(); // Commenting out to allow natural scroll if JS fails or for accessibility
+            const targetId = this.getAttribute("href");
+
+            setActiveSection(targetId);
+
+            // Optional: Smooth scroll to section if not using SPA-like hide/show
+            // const targetSectionElement = document.querySelector(targetId);
+            // if(targetSectionElement) {
+            //    targetSectionElement.scrollIntoView({ behavior: 'smooth' });
+            // }
+          });
+        });
+
+        // Handle hash changes (e.g. browser back/forward buttons)
+        window.addEventListener("hashchange", function () {
+          setActiveSection(window.location.hash);
+        });
+      });
+    </script>
+  </body>
+</html>
